@@ -1,4 +1,78 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+  display: block;
+  perspective: 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#game-board {
+  position: relative;
+  background-color: burlywood;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  padding: 50px 50px;
+  margin: auto;
+  box-shadow: 0 0 0 20px rgb(135, 110, 77);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.game-board__circle {
+  outline: 8px solid darkred;
+  background-color: burlywood;
+  border-radius: 50%;
+  padding-top: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.game-pieces__container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto 100px;
+}
+
+.game-piece {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: beige;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.33);
+}
+
+.game-piece.dark {
+  background-color: darkslategray;
+}
+
+.game-piece.square {
+  border-radius: 10px;
+}
+
+.game-piece.tall {
+  width: 95px;
+  height: 95px;
+}
+
+.game-piece.hollow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: rgba(0,0,0, .16);
+  position: absolute;
 }
