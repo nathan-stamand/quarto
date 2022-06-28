@@ -31,9 +31,17 @@ body {
   padding-top: 100%;
   width: 100%;
   margin: auto;
+  position: relative;
 }
 
-.game-pieces__container {
+.game-board__circle .game-piece {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.available-pieces__container {
   display: grid;
   grid-template-columns: repeat(4, auto);
   gap: 20px;
