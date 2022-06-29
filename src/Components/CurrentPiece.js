@@ -1,5 +1,5 @@
 import currentPieceContext from "../currentPieceContext";
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import Piece from "./Piece";
 
 const CurrentPiece = () => {
@@ -7,7 +7,7 @@ const CurrentPiece = () => {
 
   return (
     <div className="current-piece">
-      <h2>Current Piece:</h2>
+      <h3>Current Piece</h3>
       {currentPiece > -1 ? <Piece id={currentPiece} /> : ""}
     </div>
   );
