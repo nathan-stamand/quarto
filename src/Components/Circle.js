@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import Piece from "./Piece";
 import currentPieceContext from "../currentPieceContext";
-import gameBoardContext from "../GameBoardContext";
+import gameBoardContext from "../gameBoardContext";
 import gamePiecesContext, { gamePieces } from "../gamePieces";
 import { useContext } from "react";
 
@@ -11,6 +11,7 @@ const Circle = ({ id, pieceId }) => {
   const [currentGameBoard, setCurrentGameBoard] = useContext(gameBoardContext);
   const [currentGamePiecesContext, setCurrentGamePiecesContext] =
     useContext(gamePiecesContext);
+
   const setPiece = () => {
     if (currentPiece) {
       setCurrentGameBoard({ ...currentGameBoard, [id]: currentPiece });
@@ -26,13 +27,14 @@ const Circle = ({ id, pieceId }) => {
     }
   };
   return (
-    <div
+    <button
       className="game-board__circle"
+      disabled={currentPiece > -1 ? false : true}
       onClick={() => setPiece()}
       data-position={id}
     >
       {pieceId ? <Piece id={pieceId} /> : ""}
-    </div>
+    </button>
   );
 };
 
