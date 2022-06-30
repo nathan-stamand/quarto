@@ -3,11 +3,14 @@
 import Piece from "./Piece";
 import currentPieceContext from "../currentPieceContext";
 import gameBoardContext from "../gameBoardContext";
+import { gameContext } from "../gameContext";
 import gamePiecesContext, { gamePieces } from "../gamePieces";
 import { useContext } from "react";
+import "./Circle.css";
 
 const Circle = ({ id, pieceId }) => {
   const [currentPiece, setCurrentPiece] = useContext(currentPieceContext);
+  const [currentGameContext, setGameContext] = useContext(gameContext);
   const [currentGameBoard, setCurrentGameBoard] = useContext(gameBoardContext);
   const [currentGamePiecesContext, setCurrentGamePiecesContext] =
     useContext(gamePiecesContext);
@@ -24,6 +27,13 @@ const Circle = ({ id, pieceId }) => {
       };
       setCurrentGamePiecesContext(newPieceState);
       setCurrentPiece(-1);
+      setGameContext({
+        ...currentGameContext,
+        showAvailable: true,
+        turnCount: ++currentGameContext.turnCount,
+        turnPhase: 2,
+      });
+      console.log(currentGameContext);
     }
   };
   return (
