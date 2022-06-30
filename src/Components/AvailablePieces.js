@@ -5,6 +5,8 @@ import currentPieceContext from "../currentPieceContext";
 import gamePiecesContext, { gamePieces } from "../gamePieces";
 import { gameContext } from "../gameContext";
 import Modal from "./Modal";
+import "./AvailablePieces.css";
+import "./Piece.css";
 
 const AvailablePieces = () => {
   const [currentGameContext, setGameContext] = useContext(gameContext);
@@ -16,14 +18,8 @@ const AvailablePieces = () => {
     const newGameContext = {
       ...currentGameContext,
       showAvailable: false,
-    };
-    setGameContext(newGameContext);
-  };
-
-  const showHideModal = () => {
-    const newGameContext = {
-      ...currentGameContext,
-      showAvailable: !currentGameContext.showAvailable,
+      turnPhase: 1,
+      currentPlayer: currentGameContext.currentPlayer == 2 ? 1 : 2,
     };
     setGameContext(newGameContext);
   };
@@ -31,13 +27,6 @@ const AvailablePieces = () => {
   if (currentGameContext.showAvailable) {
     return (
       <Modal>
-        <button
-          className="available-pieces-toggle"
-          onClick={() => showHideModal()}
-        >
-          &times;
-        </button>
-
         <div className="available-pieces__container">
           {Object.keys(gamePieces).map((key) => {
             if (!currentGamePiecesContext[key].played && key != currentPiece) {
@@ -50,14 +39,7 @@ const AvailablePieces = () => {
       </Modal>
     );
   } else {
-    return (
-      <button
-        className="available-pieces-toggle"
-        onClick={() => showHideModal()}
-      >
-        Available Pieces
-      </button>
-    );
+    return <></>;
   }
 };
 

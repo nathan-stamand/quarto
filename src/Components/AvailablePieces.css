@@ -1,0 +1,36 @@
+.available-pieces__container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 600px;
+  height: 600px;
+  z-index: 50;
+  background-color: rgb(116, 32, 32);
+  padding: 40px;
+  border-radius: 0 0 0 50px;
+  animation-name: slideAvailablePieces;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+.available-pieces__container .game-piece:hover, 
+.available-pieces__container .game-piece:focus {
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255,255,255,.5);
+}
+
+@keyframes slideAvailablePieces {
+  100% {
+    right: 0
+  }
+}
+
+@-webkit-keyframes slideAvailablePieces {
+  100% { right: 0; }
+}
