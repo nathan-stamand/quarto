@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import Circle from "./Circle";
 import gameBoardContext from "../gameBoardContext";
-import { gameContext } from "../gameContext";
+import gameContext from "../gameContext";
 import { useContext } from "react";
 import CurrentPiece from "./CurrentPiece";
 import "./GameBoard.css";
@@ -9,10 +9,10 @@ import "./GameBoard.css";
 const GameBoard = () => {
   const [gameBoard] = useContext(gameBoardContext);
   const [currentGameContext] = useContext(gameContext);
+
   return (
     <div className="external-board">
       <hgroup className="game-data">
-        <h1>quarto</h1>
         <h2>player {currentGameContext.currentPlayer}&apos;s turn</h2>
         <em>
           {currentGameContext.turnPhase == 1

@@ -1,0 +1,21 @@
+.help-menu {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.display-pieces {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  gap: 30px;
+  margin: 60px auto;
+}
+
+.display-pieces .piece-container {
+  flex: 1 1 20%
+}

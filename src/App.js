@@ -1,14 +1,19 @@
 import Game from "./Pages/Game";
 import { StrictMode } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Provider from "./Components/Provider";
+import MainMenu from "./Pages/MainMenu";
 
 const App = () => {
   return (
-    <StrictMode>
-      <Provider>
-        <Game />
-      </Provider>
-    </StrictMode>
+    <Provider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainMenu />} />
+          <Route path="/play-a-lil-round" element={<Game />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 };
 

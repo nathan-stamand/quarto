@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const gamePieces = {
+export const initialGamePieces = {
   1: {
     played: false,
     characteristics: {
@@ -147,6 +147,6 @@ export const gamePieces = {
   },
 };
 
-const gamePiecesContext = createContext(gamePieces);
+const gamePiecesContext = createContext(initialGamePieces);
 
 export default gamePiecesContext;
