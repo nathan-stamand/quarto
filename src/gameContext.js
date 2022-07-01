@@ -5,7 +5,9 @@ export const initialGameContext = {
   turnCount: 0,
   turnPhase: 2, // there are only 2 phases. We start on 2nd phase because that's when we select a piece
   currentPlayer: 2, // start with player 2 selecting a piece for player one
-  gameState: null, // options: null (no game), active, win, or draw
+  gameState: "active", // options: active, win, or draw
 };
 
-export const gameContext = createContext(initialGameContext);
+const gameContext = createContext(initialGameContext);
+
+export default gameContext;

@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const gameBoard = {
+export const initialGameBoard = {
   1.1: null,
   1.2: null,
   1.3: null,
@@ -19,6 +19,6 @@ export const gameBoard = {
   4.4: null,
 };
 
-const gameBoardContext = createContext(gameBoard);
+const gameBoardContext = createContext(initialGameBoard);
 
 export default gameBoardContext;

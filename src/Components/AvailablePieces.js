@@ -2,8 +2,8 @@ import Piece from "./Piece";
 import { v4 as uuidv4 } from "uuid";
 import { useContext } from "react";
 import currentPieceContext from "../currentPieceContext";
-import gamePiecesContext, { gamePieces } from "../gamePieces";
-import { gameContext } from "../gameContext";
+import gamePiecesContext from "../gamePieces";
+import gameContext from "../gameContext";
 import Modal from "./Modal";
 import "./AvailablePieces.css";
 import "./Piece.css";
@@ -12,6 +12,14 @@ const AvailablePieces = () => {
   const [currentGameContext, setGameContext] = useContext(gameContext);
   const [currentPiece, setCurrentPiece] = useContext(currentPieceContext);
   const [currentGamePiecesContext] = useContext(gamePiecesContext);
+
+  const unplayedPieces = Object.keys(currentGamePiecesContext).filter(
+    (piece) => !currentGamePiecesContext[piece].played
+  );
+
+  if (!unplayedPieces.length) {
+    setGameContext({ ...currentGameContext, gameState: "draw" });
+  }
 
   const selectPiece = (e) => {
     setCurrentPiece(e.target.id);
@@ -28,7 +36,7 @@ const AvailablePieces = () => {
     return (
       <Modal>
         <div className="available-pieces__container">
-          {Object.keys(gamePieces).map((key) => {
+          {Object.keys(currentGamePiecesContext).map((key) => {
             if (!currentGamePiecesContext[key].played && key != currentPiece) {
               return (
                 <Piece key={uuidv4()} id={key} selectPiece={selectPiece} />

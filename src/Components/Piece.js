@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
-import { gamePieces } from "../gamePieces";
+import { initialGamePieces } from "../gamePieces";
 
 const Piece = ({ id, selectPiece }) => {
-  const { color, height, shape, fill } = gamePieces[id].characteristics;
+  const { color, height, shape, fill } = initialGamePieces[id].characteristics;
 
   return (
     <div
