@@ -3,6 +3,9 @@
   width: 100%;
   max-width: 600px;
   margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px 35px;
+  border-radius: 10px;
 }
 
 .display-pieces {
