@@ -1,0 +1,51 @@
+.game-piece {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: beige;
+  background-image: url("../images/woodgrain.svg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: auto;
+  transition: box-shadow .33s;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+  }
+
+  &::before {
+    box-shadow: -3px 0 10px rgba(0,0,0,.5);
+  }
+
+  &::after {
+    box-shadow: 3px 0 10px rgba(255,255,255,.25);
+  }
+
+  &.dark {
+    background-color: darkslategray;
+  }
+
+  &.square {
+    border-radius: 10px;
+  }
+
+  &.tall {
+    width: 95px;
+    height: 95px;
+  }
+  
+  &.hollow {
+    background-image: url("../images/woodgrain.svg"), radial-gradient(rgba(0,0,0,.25) 33%, transparent 34%)
+  }
+}
+

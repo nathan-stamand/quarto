@@ -5,8 +5,7 @@ import currentPieceContext from "../currentPieceContext";
 import gamePiecesContext from "../gamePieces";
 import gameContext from "../gameContext";
 import Modal from "./Modal";
-import "./AvailablePieces.css";
-import "./Piece.css";
+import "./AvailablePieces.scss";
 
 const AvailablePieces = () => {
   const [currentGameContext, setGameContext] = useContext(gameContext);

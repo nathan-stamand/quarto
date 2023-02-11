@@ -4,7 +4,7 @@ import gameBoardContext from "../gameBoardContext";
 import gameContext from "../gameContext";
 import { useContext } from "react";
 import CurrentPiece from "./CurrentPiece";
-import "./GameBoard.css";
+import "./GameBoard.scss";
 
 const GameBoard = () => {
   const [gameBoard] = useContext(gameBoardContext);

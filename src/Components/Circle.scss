@@ -11,15 +11,15 @@
   z-index: 15;
   cursor: pointer;
   transition: background-color .33s;
-}
-
-.game-board__circle:hover, .game-board__circle:focus {
-  background-color: rgba(0,0,0,.15);
-}
-
-.game-board__circle .game-piece {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  
+  &:hover, &:focus {
+    background-color: rgba(0,0,0,.15);
+  }
+  
+  .game-piece {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

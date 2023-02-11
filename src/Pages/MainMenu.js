@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import HelpMenu from "../Components/HelpMenu";
-import "./MainMenu.css";
+import "./MainMenu.scss";
 
 const MainMenu = () => {
   const [displayHelp, setDisplayHelp] = useState(false);
