@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
 import { initialGamePieces } from "../gamePieces";
+import "./Piece.scss";
 
 const Piece = ({ id, selectPiece }) => {
   const { color, height, shape, fill } = initialGamePieces[id].characteristics;

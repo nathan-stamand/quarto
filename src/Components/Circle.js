@@ -6,7 +6,7 @@ import gameBoardContext from "../gameBoardContext";
 import gameContext from "../gameContext";
 import gamePiecesContext, { initialGamePieces } from "../gamePieces";
 import { useContext } from "react";
-import "./Circle.css";
+import "./Circle.scss";
 import checkWin from "../winningCombos";
 
 const Circle = ({ id, pieceId }) => {

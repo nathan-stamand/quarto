@@ -16,13 +16,13 @@
   animation-name: slideAvailablePieces;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-}
 
-
-.available-pieces__container .game-piece:hover, 
-.available-pieces__container .game-piece:focus {
-  cursor: pointer;
-  box-shadow: 0 0 12px rgba(255,255,255,.5);
+  .game-piece {
+    &:hover, &:focus {
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(#fff, .5)
+    } 
+  }
 }
 
 @keyframes slideAvailablePieces {
