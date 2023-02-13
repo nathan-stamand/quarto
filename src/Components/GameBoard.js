@@ -8,10 +8,19 @@ import "./_GameBoard.scss";
 
 const GameBoard = () => {
   const [gameBoard] = useContext(gameBoardContext);
-  const [currentGameContext] = useContext(gameContext);
+  const [currentGameContext, setGameContext] = useContext(gameContext);
+
+  const showAvailable = () => {
+    const newGameContext = {
+      ...currentGameContext,
+      showAvailable: true
+    }
+    setGameContext(newGameContext);
+  }
 
   return (
     <div className="external-board">
+      <button onClick={showAvailable} className="available-pieces__max" aria-label="maximize">Pieces</button>
       <hgroup className="game-data">
         <h2>player {currentGameContext.currentPlayer}&apos;s turn</h2>
         <em>

@@ -22,6 +22,7 @@ const AvailablePieces = () => {
 
   const selectPiece = (e) => {
     setCurrentPiece(e.target.id);
+    console.log(currentGameContext)
     const newGameContext = {
       ...currentGameContext,
       showAvailable: false,
@@ -31,12 +32,21 @@ const AvailablePieces = () => {
     setGameContext(newGameContext);
   };
 
+  const hideAvailable = () => {
+    const newGameContext = {
+      ...currentGameContext,
+      showAvailable: false
+    }
+    setGameContext(newGameContext);
+  }
+
   if (currentGameContext.showAvailable) {
     return (
       <Modal>
         <div className="available-pieces__container">
-          <button className="available-pieces__max" aria-label="maximize">&#43;</button>
-          <button className="available-pieces__min" aria-label="minimize">&#8208;</button>
+          {currentGameContext.turnCount > 0 &&
+            <button onClick={hideAvailable} className="available-pieces__min" aria-label="minimize">&#8208;</button>
+          }
           {Object.keys(currentGamePiecesContext).map((key) => {
             if (!currentGamePiecesContext[key].played && key != currentPiece) {
               return (

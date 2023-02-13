@@ -17,6 +17,7 @@ const Circle = ({ id, pieceId }) => {
     useContext(gamePiecesContext);
 
   const setPiece = () => {
+    console.log(currentGameBoard[id]);
     if (currentPiece) {
       const newGameBoard = { ...currentGameBoard, [id]: currentPiece };
       setCurrentGameBoard(newGameBoard);
@@ -47,7 +48,7 @@ const Circle = ({ id, pieceId }) => {
   return (
     <button
       className="game-board__circle"
-      disabled={currentPiece > -1 ? false : true}
+      disabled={currentPiece > -1 && !pieceId ? false : true}
       onClick={() => setPiece()}
       data-position={id}
     >

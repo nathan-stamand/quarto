@@ -57,15 +57,16 @@
       grid-row: 4;
     }
   }
-
-  @include mixins.med {
-
-  }
-
-  @include mixins.lar {
-
-  }
 }
+
+.available-pieces__min {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  background-color: darkred;
+}
+
 
 @keyframes slideAvailablePieces {
   100% {
