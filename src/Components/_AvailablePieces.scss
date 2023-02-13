@@ -61,10 +61,12 @@
 
 .available-pieces__min {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%, 0);
   color: #fff;
   background-color: darkred;
+  z-index: 15;
 }
 
 

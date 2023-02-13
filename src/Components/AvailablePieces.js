@@ -45,7 +45,7 @@ const AvailablePieces = () => {
       <Modal>
         <div className="available-pieces__container">
           {currentGameContext.turnCount > 0 &&
-            <button onClick={hideAvailable} className="available-pieces__min" aria-label="minimize">&#8208;</button>
+            <button onClick={hideAvailable} className="available-pieces__min" aria-label="minimize">Board</button>
           }
           {Object.keys(currentGamePiecesContext).map((key) => {
             if (!currentGamePiecesContext[key].played && key != currentPiece) {
