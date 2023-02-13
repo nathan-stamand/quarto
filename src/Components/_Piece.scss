@@ -1,6 +1,8 @@
+@use "./mixins";
+
 .game-piece {
-  width: 75px;
-  height: 75px;
+  width: Min(10vw, 75px);
+  height: Min(10vw, 75px);
   border-radius: 50%;
   background-color: beige;
   background-image: url("../images/woodgrain.svg");
@@ -40,8 +42,8 @@
   }
 
   &.tall {
-    width: 95px;
-    height: 95px;
+    width: Min(13vw, 95px);
+    height: Min(13vw, 95px);
   }
   
   &.hollow {

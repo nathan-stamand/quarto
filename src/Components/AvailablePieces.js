@@ -5,7 +5,7 @@ import currentPieceContext from "../currentPieceContext";
 import gamePiecesContext from "../gamePieces";
 import gameContext from "../gameContext";
 import Modal from "./Modal";
-import "./AvailablePieces.scss";
+import "./_AvailablePieces.scss";
 
 const AvailablePieces = () => {
   const [currentGameContext, setGameContext] = useContext(gameContext);
@@ -35,6 +35,8 @@ const AvailablePieces = () => {
     return (
       <Modal>
         <div className="available-pieces__container">
+          <button className="available-pieces__max" aria-label="maximize">&#43;</button>
+          <button className="available-pieces__min" aria-label="minimize">&#8208;</button>
           {Object.keys(currentGamePiecesContext).map((key) => {
             if (!currentGamePiecesContext[key].played && key != currentPiece) {
               return (

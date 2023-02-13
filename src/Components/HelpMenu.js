@@ -1,7 +1,7 @@
 import { initialGamePieces } from "../gamePieces";
 import Piece from "./Piece";
 import { v4 as uuidv4 } from "uuid";
-import "./HelpMenu.scss";
+import "./_HelpMenu.scss";
 
 const winningCombos = [
   [12, 8, 14, 2],

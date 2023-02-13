@@ -1,7 +1,7 @@
 import currentPieceContext from "../currentPieceContext";
 import { useContext } from "react";
 import Piece from "./Piece";
-import "./CurrentPiece.scss";
+import "./_CurrentPiece.scss";
 
 const CurrentPiece = () => {
   const [currentPiece] = useContext(currentPieceContext);

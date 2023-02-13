@@ -1,6 +1,7 @@
+@use "./mixins";
+
 .external-board {
-  width: 90%;
-  max-width: 900px;
+  width: Min(100%, 700px);
   position: relative;
   margin: auto;
 }
@@ -35,10 +36,9 @@
   background-color: burlywood;
   justify-content: center;
   align-items: center;
-  padding: 200px;
-  border: 20px solid rgb(135, 110, 77);
+  padding: 180px 30px 70px;
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-columns: repeat(4, Min(12vw, 100px));
   gap: 30px;
   background-image: url("../images/woodgrain.svg");
   background-size: cover;
@@ -55,5 +55,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: inherit;
+  }
+
+  @include mixins.med {
+    padding: 200px 70px 70px;  
+  }
+
+  @include mixins.lar {
+    border: 20px solid rgb(135, 110, 77);
   }
 }

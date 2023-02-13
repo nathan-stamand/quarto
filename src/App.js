@@ -1,5 +1,4 @@
 import Game from "./Pages/Game";
-import { StrictMode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Provider from "./Components/Provider";
 import MainMenu from "./Pages/MainMenu";

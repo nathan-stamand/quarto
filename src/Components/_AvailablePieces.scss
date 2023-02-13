@@ -1,0 +1,78 @@
+@use "mixins";
+
+.available-pieces__container {
+  display: grid;
+  grid-template-columns: repeat(4, Min(15vw, 105px));
+  grid-template-rows: repeat(4, Min(15vw, 105px));
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  background-color: rgb(116, 32, 32);
+  padding: 40px;
+  animation-name: slideAvailablePieces;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  .game-piece {
+    &:hover, &:focus {
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(#fff, .5)
+    } 
+
+    &.circle.solid {
+      grid-column: 1;
+    }
+
+    &.circle.hollow {
+      grid-column: 2;
+    }
+
+    &.square.solid {
+      grid-column: 3;
+    }
+
+    &.square.hollow {
+      grid-column: 4;
+    }
+
+    &.light.short {
+      grid-row: 1;
+    }
+
+    &.light.tall {
+      grid-row: 2;
+    }
+
+    &.dark.short {
+      grid-row: 3;
+    }
+
+    &.dark.tall {
+      grid-row: 4;
+    }
+  }
+
+  @include mixins.med {
+
+  }
+
+  @include mixins.lar {
+
+  }
+}
+
+@keyframes slideAvailablePieces {
+  100% {
+    right: 0
+  }
+}
+
+@-webkit-keyframes slideAvailablePieces {
+  100% { right: 0; }
+}

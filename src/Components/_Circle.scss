@@ -1,6 +1,6 @@
 
 .game-board__circle {
-  outline: 8px solid darkred;
+  outline: Min(1vw, 8px) solid darkred;
   background-color: transparent;
   border: none;
   border-radius: 50%;
