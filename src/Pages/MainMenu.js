@@ -6,26 +6,27 @@ import "./_MainMenu.scss";
 const MainMenu = () => {
   const [displayHelp, setDisplayHelp] = useState(false);
   return (
-    <div className="main-menu">
-      <h1>quarto</h1>
-
+    <>
       {displayHelp ? (
-        <HelpMenu />
-      ) : (
         <>
-          <h2>How do you feel about playing Quarto?</h2>
-
-          <div className="main-menu__item">
-            <button onClick={() => setDisplayHelp(!displayHelp)}>
-              I Have Little to No Idea What I&apos;m Doing.
-            </button>
-          </div>
+        <HelpMenu />
+        <div className="main-menu">
+          <Link className="btn" to="/play-a-lil-round">play</Link>
+          <button className="btn secondary" onClick={() => setDisplayHelp(!displayHelp)}>
+              home
+          </button>
+        </div>
         </>
+      ) : (
+        <div className="main-menu">
+          <h1>QUARTO!</h1>
+          <Link className="btn" to="/play-a-lil-round">play</Link>
+          <button className="btn secondary" onClick={() => setDisplayHelp(!displayHelp)}>
+              learn
+          </button>
+        </div>
       )}
-      <div className="main-menu__item">
-        <Link to="/play-a-lil-round">I&apos;m Ready to PLAY!</Link>
-      </div>
-    </div>
+    </>
   );
 };
 

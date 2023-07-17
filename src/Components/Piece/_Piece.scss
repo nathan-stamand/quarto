@@ -1,11 +1,11 @@
 @use "../mixins";
+@use "../colors" as color;
 
 .game-piece {
   width: Min(10vw, 75px);
   height: Min(10vw, 75px);
   border-radius: 50%;
-  background-color: beige;
-  background-image: url("../../images/woodgrain.svg");
+  background-color: color.$red;
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@
   }
 
   &.dark {
-    background-color: darkslategray;
+    background-color: color.$orange;
   }
 
   &.square {
@@ -48,7 +48,7 @@
   }
 
   &.hollow {
-    background-image: url("../../images/woodgrain.svg"),
+    background-image:
       radial-gradient(rgba(0, 0, 0, 0.25) 33%, transparent 34%);
   }
 }

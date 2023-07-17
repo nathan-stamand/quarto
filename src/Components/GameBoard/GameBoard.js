@@ -27,14 +27,6 @@ const GameBoard = () => {
       >
         Pieces
       </button>
-      <hgroup className="game-data">
-        <h2>player {currentGameContext.currentPlayer}&apos;s turn</h2>
-        <em>
-          {currentGameContext.turnPhase == 1
-            ? "Please place the selected piece."
-            : "Now, select your opponent's piece."}
-        </em>
-      </hgroup>
       <CurrentPiece />
       <div id="game-board">
         {Object.keys(gameBoard).map((id) => {

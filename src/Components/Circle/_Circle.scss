@@ -1,6 +1,7 @@
+@use "../colors" as color;
 
 .game-board__circle {
-  outline: Min(1vw, 8px) solid darkred;
+  outline: Min(1vw, 8px) solid color.$medium-blue;
   background-color: transparent;
   border: none;
   border-radius: 50%;
