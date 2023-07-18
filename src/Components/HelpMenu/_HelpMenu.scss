@@ -1,3 +1,4 @@
+@use '../mixins' as mixin;
 .help-menu {
   display: flex;
   flex-direction: column;
@@ -6,6 +7,23 @@
   margin: auto;
   padding: 25px 35px;
   text-align: center;
+
+  ul {
+    list-style: none;
+
+    li {
+      width: auto;
+    }
+
+    @include mixin.med {
+      text-align: left;
+      display: grid;
+      inline-size: fit-content;
+      margin-inline: auto;
+      gap: 20px 60px;
+      grid-template-columns: auto auto;
+    }
+  }
 }
 
 .display-pieces {
@@ -19,6 +37,6 @@
   margin: auto;
 
   .piece-container {
-    flex: 1 1 20%
+    flex: 1 1 20%;
   }
 }
