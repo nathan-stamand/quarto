@@ -1,5 +1,5 @@
-@use "../mixins" as mixins;
-@use "../colors" as color;
+@use '../mixins' as mixins;
+@use '../colors' as color;
 
 .external-board {
   width: Min(100%, 700px);
@@ -7,49 +7,46 @@
   margin: auto;
 }
 
+.full-screen {
+  width: fit-content;
+  padding: 15px;
+  padding-left: 60px;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
 .game-screen {
   position: relative;
+  width: fit-content;
+  height: auto;
+  flex: 0 0 auto;
 }
 
 .available-pieces__max {
   position: absolute;
-  right: 100%;
+  right: calc(100% + 2px);
   top: 0;
-  transform: translateY(100%);
+  transform: translateY(calc(100% + 1px));
   writing-mode: sideways-lr;
   color: color.$dark-blue;
   background-color: color.$medium-blue;
-  font-size: 1rem;
-  padding: 1rem .5rem;
+  font-size: calc(.8rem + .1vw);
+  line-height: 1;
+  padding: 1rem 0.5rem;
   border: none;
   z-index: 10;
   cursor: pointer;
 }
 
 .game-data {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 5;
-  border-radius: 10px;
-
-  * {
-    font-weight: 600;
-    font-size: 22px;
-    text-align: center;
-    color: rgba(53, 32, 6, 0.478);
-    margin: 10px auto;
-  }
-
-  h1,
-  h2 {
-    font-weight: 600;
-    font-size: 28px;
-    text-align: center;
-    color: rgba(53, 32, 6, 0.478);
-    margin: 10px auto;
-  }
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 #game-board {
@@ -64,12 +61,12 @@
   overflow: hidden;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     transform: rotate(180deg);
-    background-image: url("../../images/woodgrain.svg");
+    background-image: url('../../images/woodgrain.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

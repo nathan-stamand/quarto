@@ -77,12 +77,13 @@
 
 .available-pieces__min {
   position: absolute;
-  right: 100%;
+  right: calc(100% + 3px);
   top: 0;
   writing-mode: sideways-lr;
   color: color.$dark-blue;
   background-color: color.$white;
-  font-size: 1rem;
+  font-size: calc(.8rem + .1vw);
+  line-height: 1;
   padding: 1rem 0.5rem;
   border: none;
   z-index: 10;

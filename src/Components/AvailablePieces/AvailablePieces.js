@@ -21,7 +21,6 @@ const AvailablePieces = () => {
 
   const selectPiece = (e) => {
     setCurrentPiece(e.target.id);
-    console.log(currentGameContext);
     const newGameContext = {
       ...currentGameContext,
       showAvailable: false,
