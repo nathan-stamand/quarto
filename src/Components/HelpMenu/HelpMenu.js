@@ -56,9 +56,9 @@ const HelpMenu = () => {
       <p>
         That means that the loser will choose the piece that defeats them.
         Pretty sick, pretty twisted, but also pretty fun. Now let's check out a
-        few winning combos. See if you can tell why these would win.
+        few winning combos. 
       </p>
-      <h3>Combo 1:</h3>
+      <h3>Combo 1: All Hollow</h3>
       <div className='display-pieces'>
         {winningCombos[0].map((el) => {
           return (
@@ -69,7 +69,7 @@ const HelpMenu = () => {
         })}
       </div>
 
-      <h3>Combo 2:</h3>
+      <h3>Combo 2: All Square</h3>
       <div className='display-pieces'>
         {winningCombos[1].map((el) => {
           return (
@@ -80,7 +80,7 @@ const HelpMenu = () => {
         })}
       </div>
 
-      <h3>Combo 3:</h3>
+      <h3>Combo 3: All Red</h3>
       <div className='display-pieces'>
         {winningCombos[2].map((el) => {
           return (
