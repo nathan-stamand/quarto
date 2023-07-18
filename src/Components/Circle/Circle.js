@@ -17,7 +17,6 @@ const Circle = ({ id, pieceId }) => {
     useContext(gamePiecesContext);
 
   const setPiece = () => {
-    console.log(currentGameBoard[id]);
     if (currentPiece) {
       const newGameBoard = { ...currentGameBoard, [id]: currentPiece };
       setCurrentGameBoard(newGameBoard);
@@ -38,7 +37,6 @@ const Circle = ({ id, pieceId }) => {
       } else {
         setGameContext({
           ...currentGameContext,
-          showAvailable: true,
           turnCount: ++currentGameContext.turnCount,
           turnPhase: 2,
         });

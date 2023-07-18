@@ -1,6 +1,23 @@
+@use "./Components/colors" as color;
+@use "./Components/vars" as var;
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-size: 1.5rem;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
-  background-color: rgb(89, 137, 149);
-  color: beige;
+  background-color: color.$dark-blue;
+  color: color.$white;
   display: block;
   padding: 0;
   margin: 0;
@@ -13,11 +30,41 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  margin: 0 0 20px;
+  margin: 0;
 }
 
 ul {
   list-style: square;
   margin: 0 0 20px;
   padding: 0;
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: 500;
+  font-family: var.$body-font-family;
+  display: inline-block;
+  background-color: color.$red;
+  color: color.$white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 0.33s;
+
+  &:hover,
+  &:focus {
+    background-color: darken(color.$red, 10%);
+  }
+
+  &.secondary {
+    background-color: color.$orange;
+    color: color.$dark-blue;
+
+    &:hover,
+    &:focus {
+      background-color: darken(color.$orange, 10%);
+    }
+  }
 }

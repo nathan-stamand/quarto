@@ -4,7 +4,6 @@ import { useContext } from "react";
 import currentPieceContext from "../../currentPieceContext";
 import gamePiecesContext from "../../gamePieces";
 import gameContext from "../../gameContext";
-import Modal from "../Modal";
 import "./_AvailablePieces.scss";
 
 const AvailablePieces = () => {
@@ -22,7 +21,6 @@ const AvailablePieces = () => {
 
   const selectPiece = (e) => {
     setCurrentPiece(e.target.id);
-    console.log(currentGameContext);
     const newGameContext = {
       ...currentGameContext,
       showAvailable: false,
@@ -40,32 +38,25 @@ const AvailablePieces = () => {
     setGameContext(newGameContext);
   };
 
-  if (currentGameContext.showAvailable) {
-    return (
-      <Modal>
-        <div className="available-pieces__container">
-          {currentGameContext.turnCount > 0 && (
-            <button
-              onClick={hideAvailable}
-              className="available-pieces__min"
-              aria-label="minimize"
-            >
-              Board
-            </button>
-          )}
-          {Object.keys(currentGamePiecesContext).map((key) => {
-            if (!currentGamePiecesContext[key].played && key != currentPiece) {
-              return (
-                <Piece key={uuidv4()} id={key} selectPiece={selectPiece} />
-              );
-            }
-          })}
-        </div>
-      </Modal>
-    );
-  } else {
-    return <></>;
-  }
+  return (
+      <div className={`available-pieces__container ${currentGameContext.showAvailable ? 'visible' : ''}`}>
+        <button
+          onClick={hideAvailable}
+          className="available-pieces__min"
+          disabled={currentGameContext.turnCount < 1 ? true : false}
+          aria-label="minimize"
+        >
+          Board
+        </button>
+        {Object.keys(currentGamePiecesContext).map((key) => {
+          if (!currentGamePiecesContext[key].played && key != currentPiece) {
+            return (
+              <Piece key={uuidv4()} id={key} selectPiece={selectPiece} />
+            );
+          }
+        })}
+      </div>
+  );
 };
 
 export default AvailablePieces;

@@ -1,0 +1,13 @@
+@use './colors' as color;
+
+@keyframes colorPhase {
+  25% {
+    color: color.$orange;
+  }
+  50% {
+    color: color.$red;
+  }
+  75% {
+    color: color.$medium-blue;
+  }
+}
