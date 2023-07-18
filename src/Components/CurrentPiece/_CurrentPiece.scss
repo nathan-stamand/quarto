@@ -1,11 +1,25 @@
-
 .current-piece {
-  width: 100%;
-  max-width: 100px;
-  position: absolute;
-  top: 60px;
-  left: 60px;
-  z-index: 15;
-  padding: 10px 20px;
-  color: rgb(228, 211, 188);
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  .game-piece {
+    margin-inline: 0;
+  }
+}
+
+.player-turn {
+  font-size: 1rem;
+}
+
+.turn-phase {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.current-piece__characteristics {
+  font-size: 0.8rem;
+  font-style: italic;
+  list-style: none;
+  column-count: 2;
 }

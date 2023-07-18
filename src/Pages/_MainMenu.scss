@@ -1,34 +1,54 @@
-.main-menu {
-  text-align: center;
-  font-weight: 500;
+@use '../Components/colors' as color;
+@use '../Components/animations' as animations;
+@use '../Components/vars' as var;
+
+#root {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
 }
 
-.main-menu__item {
-  a, button {
-    background-color: darkslategray;
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: beige;
-    border: 3px solid beige;
-    padding: 12px 18px;
-    transition: .33s;
-    box-shadow: 3px 8px 15px rgba(0,0,0,.26);
-    margin-bottom: 20px;
-    cursor: pointer;
+.main-menu {
+  text-align: center;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-    &:hover, &:focus {
-      background-color: beige;
-      color: darkslategray;
-      border-color: darkslategray;
-    }
+  h1 {
+    margin: 0;
   }
 }
 
 .game-over {
   width: 100%;
-  max-width: 600px;
-  margin: auto;
+  min-width: 100vw;
+  min-height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    color: color.$white;
+    transition: color .5s;
+    overflow: visible;
+  }
+
+  a:hover,
+  a:focus,
+  a:focus-within {
+    svg {
+      color: color.$red;
+      animation-name: colorPhase;
+      animation-duration: 5s;
+      animation-direction: forwards;
+      animation-iteration-count: infinite;
+    }
+  }
 }

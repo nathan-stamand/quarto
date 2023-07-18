@@ -4,7 +4,7 @@ export const initialGamePieces = {
   1: {
     played: false,
     characteristics: {
-      color: "light",
+      color: "orange",
       height: "short",
       shape: "circle",
       fill: "solid",
@@ -13,7 +13,7 @@ export const initialGamePieces = {
   2: {
     played: false,
     characteristics: {
-      color: "light",
+      color: "orange",
       height: "short",
       shape: "circle",
       fill: "hollow",
@@ -22,7 +22,7 @@ export const initialGamePieces = {
   3: {
     played: false,
     characteristics: {
-      color: "light",
+      color: "orange",
       height: "short",
       shape: "square",
       fill: "solid",
@@ -31,7 +31,7 @@ export const initialGamePieces = {
   4: {
     played: false,
     characteristics: {
-      color: "light",
+      color: "orange",
       height: "short",
       shape: "square",
       fill: "hollow",
@@ -40,7 +40,7 @@ export const initialGamePieces = {
   5: {
     played: false,
     characteristics: {
-      color: "light",
+      color: "orange",
       height: "tall",
       shape: "circle",
       fill: "solid",
@@ -49,7 +49,7 @@ export const initialGamePieces = {
   6: {
     played: false,
     characteristics: {
-      color: "light",
+      color: "orange",
       height: "tall",
       shape: "circle",
       fill: "hollow",
@@ -58,7 +58,7 @@ export const initialGamePieces = {
   7: {
     played: false,
     characteristics: {
-      color: "light",
+      color: "orange",
       height: "tall",
       shape: "square",
       fill: "solid",
@@ -67,7 +67,7 @@ export const initialGamePieces = {
   8: {
     played: false,
     characteristics: {
-      color: "light",
+      color: "orange",
       height: "tall",
       shape: "square",
       fill: "hollow",
@@ -76,7 +76,7 @@ export const initialGamePieces = {
   9: {
     played: false,
     characteristics: {
-      color: "dark",
+      color: "red",
       height: "short",
       shape: "circle",
       fill: "solid",
@@ -85,7 +85,7 @@ export const initialGamePieces = {
   10: {
     played: false,
     characteristics: {
-      color: "dark",
+      color: "red",
       height: "short",
       shape: "circle",
       fill: "hollow",
@@ -94,7 +94,7 @@ export const initialGamePieces = {
   11: {
     played: false,
     characteristics: {
-      color: "dark",
+      color: "red",
       height: "short",
       shape: "square",
       fill: "solid",
@@ -103,7 +103,7 @@ export const initialGamePieces = {
   12: {
     played: false,
     characteristics: {
-      color: "dark",
+      color: "red",
       height: "short",
       shape: "square",
       fill: "hollow",
@@ -112,7 +112,7 @@ export const initialGamePieces = {
   13: {
     played: false,
     characteristics: {
-      color: "dark",
+      color: "red",
       height: "tall",
       shape: "circle",
       fill: "solid",
@@ -121,7 +121,7 @@ export const initialGamePieces = {
   14: {
     played: false,
     characteristics: {
-      color: "dark",
+      color: "red",
       height: "tall",
       shape: "circle",
       fill: "hollow",
@@ -130,7 +130,7 @@ export const initialGamePieces = {
   15: {
     played: false,
     characteristics: {
-      color: "dark",
+      color: "red",
       height: "tall",
       shape: "square",
       fill: "solid",
@@ -139,7 +139,7 @@ export const initialGamePieces = {
   16: {
     played: false,
     characteristics: {
-      color: "dark",
+      color: "red",
       height: "tall",
       shape: "square",
       fill: "hollow",
