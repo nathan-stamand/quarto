@@ -28,7 +28,7 @@
 
 .available-pieces__max {
   position: absolute;
-  right: calc(100% + 2px);
+  right: calc(100% + 3px);
   top: 0;
   transform: translateY(calc(100% + 1px));
   writing-mode: sideways-lr;
@@ -43,6 +43,7 @@
 }
 
 .game-data {
+  min-height: 225px;
   width: 200px;
   display: flex;
   flex-direction: column;
